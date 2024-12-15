@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Homepage Section -->
+    <div id="homepage" class="homepage">
+      <header>
+        <h1>Welcome to Health Tracker</h1>
+        <p>Your personal health and fitness companion</p>
+      </header>
+      <main>
+        <button id="startButton">Start Your Health Journey</button>
+      </main>
+    </div>
+
+    <!-- Dashboard Section (hidden initially) -->
+    <div id="dashboard" class="dashboard" style="display: none">
+      <header>
+        <h1>Health Tracker</h1>
+      </header>
+      <a href="index.html" class="back-btn">&#8592;</a>
+      <main>
+        <section id="bmr">
+          <h2>BMR Calculator</h2>
+          <form id="bmrForm">
+            <label for="age">Age:</label>
+            <input type="number" id="age" required /><br />
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option></select
+            ><br />
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required /><br />
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" required /><br />
+            <button type="submit">Calculate BMR</button>
+          </form>
+          <div id="bmrResult"></div>
+        </section>
+
+        <div class="health-checkup">
+          <h2>BMI Calculator</h2>
+          <form id="bmi-form">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required /><br />
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" required /><br />
+
+            <button type="submit">Calculate BMI</button>
+          </form>
+          <p id="bmi-result"></p>
+          <p id="bmi-message"></p>
+        </div>
+
+        <section id="recipe">
+          <h2>Healthy Recipe Generator</h2>
+          <form id="recipeForm">
+            <label for="mealType">Meal Type:</label>
+            <select id="mealType" required>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option></select
+            ><br />
+            <button type="submit">Generate Recipe</button>
+          </form>
+          <div id="recipeResult"></div>
+        </section>
+
+        <section id="exercise">
+          <h2>Exercise Routine Generator</h2>
+          <form id="exerciseForm">
+            <label for="goal">Fitness Goal:</label>
+            <select id="goal" required>
+              <option value="weightLoss">Weight Loss</option>
+              <option value="strength">Strength</option></select
+            ><br />
+            <button type="submit">Generate Exercise Routine</button>
+          </form>
+          <div id="exerciseResult"></div>
+        </section>
+
+        <section id="waterTracker">
+          <h2>Water Intake Tracker</h2>
+          <form id="waterForm">
+            <label for="waterIntake">Water Intake (ml):</label>
+            <input type="number" id="waterIntake" required /><br />
+            <button type="submit">Log Water Intake</button>
+          </form>
+          <div id="waterResult"></div>
+        </section>
+
+        <section id="calorieChecker">
+          <h2>Calorie Checker</h2>
+          <form id="calorieForm">
+            <label for="foodItem">Food Item:</label>
+            <input type="text" id="foodItem" required /><br />
+            <label for="quantity">Quantity (grams):</label>
+            <input type="number" id="quantity" required /><br />
+            <button type="submit">Check Calories</button>
+          </form>
+          <div id="calorieResult"></div>
+        </section>
+
+        <form id="period-form">
+          <h2>Period Tracker</h2>
+          <label for="start-date">Last Period Start Date:</label>
+          <input type="date" id="start-date" required />
+
+          <label for="end-date">Last Period End Date:</label>
+          <input type="date" id="end-date" required />
+
+          <label for="cycle-length">Cycle Length (in days):</label>
+          <input type="number" id="cycle-length" value="28" required />
+
+          <button type="submit">Calculate Next Period</button>
+        </form>
+
+        <div id="cycle-length-display"></div>
+        <div id="next-period"></div>
+
+        <div class="sleep-tracker">
+          <h2>Sleep Tracker</h2>
+          <form id="sleep-form">
+            <label for="sleep-start">Sleep Start:</label>
+            <input type="time" id="sleep-start" required /><br />
+
+            <label for="sleep-end">Sleep End:</label>
+            <input type="time" id="sleep-end" required /><br />
+
+            <button type="submit">Track Sleep</button>
+          </form>
+          <p id="sleep-duration"></p>
+          <p id="sleep-message"></p>
+        </div>
+
+        <div class="health-checkup">
+          <h2>Hydration Tracker</h2>
+          <form id="hydration-form">
+            <label for="water-intake">Water Intake (ml):</label>
+            <input type="number" id="water-intake" required /><br />
+
+            <button type="submit">Track Water Intake</button>
+          </form>
+          <p id="hydration-message"></p>
+        </div>
+
+        <div class="health-checkup">
+          <h2>Blood Pressure Tracker</h2>
+          <form id="bp-form">
+            <label for="systolic">Systolic (Upper Pressure):</label>
+            <input type="number" id="systolic" required /><br />
+
+            <label for="diastolic">Diastolic (Lower Pressure):</label>
+            <input type="number" id="diastolic" required /><br />
+
+            <button type="submit">Track Blood Pressure</button>
+          </form>
+          <p id="bp-message"></p>
+        </div>
+
+        <div class="health-checkup">
+          <h2>Heart Rate Tracker</h2>
+          <form id="hr-form">
+            <label for="heart-rate">Heart Rate (BPM):</label>
+            <input type="number" id="heart-rate" required /><br />
+
+            <button type="submit">Track Heart Rate</button>
+          </form>
+          <p id="hr-message"></p>
+        </div>
+
+        <div class="health-checkup">
+          <h2>Body Temperature Tracker</h2>
+          <form id="temp-form">
+            <label for="temperature">Temperature (°C):</label>
+            <input type="number" id="temperature" step="0.1" required /><br />
+
+            <button type="submit">Track Temperature</button>
+          </form>
+          <p id="temp-message"></p>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p>Health Tracker &copy; 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
