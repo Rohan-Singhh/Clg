@@ -311,3 +311,23 @@ document
 
     document.getElementById("bmi-message").textContent = message;
   });
+
+
+  // Add this functionality for progress tracking
+function updateProgressBar(progress) {
+  const progressBar = document.getElementById('progressBar');
+  const progressText = document.getElementById('progressBarText');
+
+  // Animate the progress bar
+  progressBar.style.width = `${progress}%`;
+  progressText.textContent = `Progress: ${progress}%`;
+}
+
+// Simulate progress increment (for demonstration)
+let progress = 0;
+setInterval(function() {
+  if (progress < 100) {
+    progress += 2;
+    updateProgressBar(progress);
+  }
+}, 500); // Update every 0.5 second (for example)
